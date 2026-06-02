@@ -1,150 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ankit - Devloper Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
+    <meta name="description" content="Ankit Rai - Software Development Engineer Portfolio. High-performance, full-stack, and AI-powered applications.">
+    <meta name="author" content="Ankit Rai">
+    <title>Ankit Rai | Software Development Engineer</title>
     
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <nav>
-            <div class="left">Ankit's Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Service</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
-                </ul>
+
+    <!-- Ambient Particle Network Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="text-gradient">ANKIT</span>RAI
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i data-lucide="moon" class="moon-icon"></i>
+                    <i data-lucide="sun" class="sun-icon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle mobile navigation menu">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                </button>
             </div>
-        </nav>
+        </div>
     </header>
 
     <main>
-        <selection class="firstSection">
-            <div class="leftSection">
-                Hi, My name is <span class="purple">Ankit Rai</span>
-                <div> and I am a passionate</div>
-                <span id="element"></span>
-                <div class="buttons">
-                    <a href="Ankit Rai Resume(2).pdf" download="Ankit Rai Resume(2).pdf"><button class="btn">Download Resume</button></a>
-                   <a href="https://github.com/Ankitrai-01" target="button"> <button class="btn">Visit Github </button> </a>
-                </div>
-            </div>
-            <div class="rightSection">
-                <img src="PIC.jpg" alt="">
-            </div>
-        </selection>
-        <hr> 
-        <section class="secondSection">
-            <span class="text-gray">What I have done so far</span>
-            <h1>Education Qualifications</h1>
-
-            <div class="box">
-                <div class="vertical">
-                    <img class="image-top" src="D.C.png" alt="">
-                    <div class="vertical-title">
-                        High School
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="hero-subtitle">Welcome to my Portfolio</span>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="text-gradient">Ankit Rai</span><br>
+                        a <span class="typewriter-text" id="typewriter" data-words='["AI/ML Developer", "Full-Stack Developer"]'></span>
+                    </h1>
+                    <p class="hero-desc">
+                        Developer with hands-on experience in full-stack development, backend engineering, and AI-powered applications. Dedicated to building scalable, intelligent solutions and clean web experiences.
+                    </p>
+                    <div class="hero-socials">
+                        <a href="https://github.com/Ankitrai-01" target="_blank" class="hero-social-link" aria-label="GitHub">
+                            <img src="assets/github-logo.png" alt="GitHub Logo" style="width: 28px; height: 28px; object-fit: contain;">
+                        </a>
+                        <a href="https://linkedin.com/in/01ankit-rai" target="_blank" class="hero-social-link" aria-label="LinkedIn">
+                            <img src="assets/linkedin-logo.png" alt="LinkedIn Logo" style="width: 28px; height: 28px; object-fit: contain;">
+                        </a>
                     </div>
-                    <span>
-                        (2019-2020)
-                    </span>
-                    <div class="vertical-desc">
-                        I had completed my high schooling from
-                        D.C. Lewise Memorial School through the
-                        Science stream and achived 78 percentage
-                        through CISCE(Council for the Indian
-                        School Certificate Examination) board council.
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            View My Work <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="resume.pdf" download="Ankit_Rai_Resume.pdf" class="btn btn-secondary">
+                            Download Resume <i data-lucide="download"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="vertical">
-                    <img class="image-top" src="D.C.png" alt="">
-                    <div class="vertical-title">
-                        Senior Secondary
-                    </div>
-                    <span>
-                        (2020-2022)
-                    </span>
-                    <div class="vertical-desc">
-                        I had completed my Senior Secondary schooling from
-                        D.C. Lewise Memorial School through the
-                        Science stream and achived 77 percentage
-                        through CISCE(Council for the Indian
-                        School Certificate Examination) board council.
-                    </div>
-                </div>
-                <div class="vertical">
-                    <img class="image-top" src="united.png" alt="">
-                    <div class="vertical-title">
-                        Graduation
-                    </div>
-                    <span>
-                        (2022-2026)
-                    </span>
-                    <div class="vertical-desc">
-                        I am persuing B-Tech 'CSE' from
-                        United College of Engineering & Research.
-                        I belive that through this college I
-                        could be able to achive the my dreams and
-                        successful position in Web-Devlopment field
+                
+                <div class="hero-visual">
+                    <div class="avatar-wrapper">
+                        <!-- Ankit Rai profile avatar -->
+                        <img src="assets/avatar.jpeg" alt="Ankit Rai Profile Image">
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- About & Skills Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Passionate SDE & AI Builder</h3>
+                        <p>
+                            I am a Software Development Engineer with a strong foundation in Data Structures, Algorithms, and Object-Oriented Programming. I specialize in designing high-quality backend APIs and integrating artificial intelligence to solve complex, real-world problems.
+                        </p>
+                        <p>
+                            My internship experiences at Hindalco Industries and Bluestock Fintech have given me valuable industry insights, allowing me to build production-ready applications, convert Figma templates into pixel-perfect frontend layouts, and optimize complex database schemas.
+                        </p>
+                        
+                        <div class="about-info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Education</span>
+                                <span class="info-value">B.Tech in CSE</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">College</span>
+                                <span class="info-value">United College of Engineering & Research</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Greater Noida, UP, India</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Email</span>
+                                <span class="info-value"><a href="mailto:arai59731@gmail.com">arai59731@gmail.com</a></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">GitHub</span>
+                                <span class="info-value"><a href="https://github.com/Ankitrai-01" target="_blank">github.com/Ankitrai-01</a></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">LinkedIn</span>
+                                <span class="info-value"><a href="https://linkedin.com/in/01ankit-rai" target="_blank">linkedin.com/in/01ankit-rai</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-wrapper">
+                        <h3>My Tech Stack</h3>
+                        
+                        <div class="skills-categories">
+                            <!-- Programming Languages -->
+                            <div class="skill-category-card">
+                                <h4 class="skill-category-title">
+                                    <i data-lucide="code-2"></i> Languages
+                                </h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">Python</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Web Technologies -->
+                            <div class="skill-category-card">
+                                <h4 class="skill-category-title">
+                                    <i data-lucide="layout"></i> Frontend & Backend
+                                </h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">React.js</span>
+                                    <span class="skill-tag">HTML5 / CSS3</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Express.js</span>
+                                    <span class="skill-tag">FastAPI</span>
+                                    <span class="skill-tag">REST APIs</span>
+                                    <span class="skill-tag">JWT Auth</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Databases & Tools -->
+                            <div class="skill-category-card">
+                                <h4 class="skill-category-title">
+                                    <i data-lucide="database"></i> Databases & Tools
+                                </h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">MongoDB</span>
+                                    <span class="skill-tag">MongoDB Atlas</span>
+                                    <span class="skill-tag">MySQL</span>
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">Git & GitHub</span>
+                                    <span class="skill-tag">Postman</span>
+                                    <span class="skill-tag">VS Code</span>
+                                </div>
+                            </div>
+
+                            <!-- Core Concepts -->
+                            <div class="skill-category-card">
+                                <h4 class="skill-category-title">
+                                    <i data-lucide="cpu"></i> Core Concepts
+                                </h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Data Structures & Algorithms</span>
+                                    <span class="skill-tag">Object-Oriented Programming (OOP)</span>
+                                    <span class="skill-tag">RAG Pipelines</span>
+                                    <span class="skill-tag">Authentication & Authz</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">My Journey</h2>
+                
+                <div class="timeline">
+                    <!-- Bluestock Fintech -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card glass-panel">
+                            <div class="timeline-header">
+                                <div class="timeline-title">
+                                    <h3>SDE Intern</h3>
+                                    <h4>Bluestock Fintech (Remote)</h4>
+                                </div>
+                                <span class="timeline-date">Jul 2025 – Aug 2025</span>
+                            </div>
+                            <div class="timeline-desc">
+                                <ul>
+                                    <li>Developed an IPO Web Application and REST APIs using React.js, Node.js, and PostgreSQL following industry-standard architecture.</li>
+                                    <li>Converted Figma UI/UX designs into fully responsive, reusable frontend components.</li>
+                                    <li>Designed and thoroughly tested RESTful API endpoints using Postman with robust validation workflows.</li>
+                                    <li>Optimized database schemas and server architectures to successfully handle increased concurrent users.</li>
+                                    <li>Maintained professional version-controlled workflows with Git and GitHub to deliver deployment-ready production code.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hindalco Industries Ltd -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card glass-panel">
+                            <div class="timeline-header">
+                                <div class="timeline-title">
+                                    <h3>Software Developer Intern</h3>
+                                    <h4>Hindalco Industries Ltd. (Aditya Birla Group)</h4>
+                                </div>
+                                <span class="timeline-date">Sept 2024 – Sept 2024</span>
+                            </div>
+                            <div class="timeline-desc">
+                                <ul>
+                                    <li>Designed and engineered a digital Library Management System to automate book inventory, issue tracking, and member lists.</li>
+                                    <li>Automated manual administration workflows, successfully reducing administrative overhead by approximately 40%.</li>
+                                    <li>Coded custom backend modules and database queries to index and manage 1,000+ library records smoothly.</li>
+                                    <li>Improved server lookup times and database indexing, cutting query response latencies by 30%.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                
+                <!-- Category Filters -->
+                <div class="filter-wrapper">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="ai-ml">AI / ML</button>
+                    <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1: HaqBot -->
+                    <div class="project-card glass-panel" data-category="ai-ml">
+                        <div class="project-img-wrapper">
+                            <img src="assets/haqbot.png" alt="HaqBot AI Platform Screenshot">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Ankitrai-01" target="_blank" class="project-link-btn" title="View Source Code">
+                                        <i data-lucide="github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tech">
+                                <span class="project-tech-tag">Gemini 1.5 Flash</span>
+                                <span class="project-tech-tag">Node.js</span>
+                                <span class="project-tech-tag">RAG</span>
+                                <span class="project-tech-tag">SSE</span>
+                            </div>
+                            <h3 class="project-title">HaqBot — AI Legal Assistant</h3>
+                            <p class="project-desc">
+                                A powerful, multimodal AI-powered legal assistant that handles legal notices, constitutional queries, and document files. Features a RAG pipeline, streamed responses in 7 regional languages using SSE, and secure Advocate logins with role-based access control.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2: VocaBay -->
+                    <div class="project-card glass-panel" data-category="fullstack">
+                        <div class="project-img-wrapper">
+                            <img src="assets/vocabay.png" alt="VocaBay Shopping Platform Screenshot">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Ankitrai-01" target="_blank" class="project-link-btn" title="View Source Code">
+                                        <i data-lucide="github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tech">
+                                <span class="project-tech-tag">Web Speech API</span>
+                                <span class="project-tech-tag">Express.js</span>
+                                <span class="project-tech-tag">MongoDB</span>
+                                <span class="project-tech-tag">Razorpay</span>
+                            </div>
+                            <h3 class="project-title">VocaBay — Voice Commerce Platform</h3>
+                            <p class="project-desc">
+                                A hands-free, voice-assisted e-commerce web platform integrating real-time speech-to-text and text-to-speech. Features natural language filters, continuous voice match, robust cataloging REST APIs, Razorpay checkout, and an optimized vendor dashboard.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3: Diabetes Prediction -->
+                    <div class="project-card glass-panel" data-category="ai-ml">
+                        <div class="project-img-wrapper">
+                            <img src="assets/diabetes.png" alt="Diabetes Prediction Web App Screenshot">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/Ankitrai-01" target="_blank" class="project-link-btn" title="View Source Code">
+                                        <i data-lucide="github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tech">
+                                <span class="project-tech-tag">Python</span>
+                                <span class="project-tech-tag">Scikit-Learn</span>
+                                <span class="project-tech-tag">Flask</span>
+                                <span class="project-tech-tag">MongoDB</span>
+                            </div>
+                            <h3 class="project-title">Type-2 Diabetes Prediction System</h3>
+                            <p class="project-desc">
+                                An AI-powered health analytics tool predicting diabetes risk based on medical markers (BMI, Insulin, Glucose). Utilizes a Gradient Boosting classifier, features secure OTP verification, and provides detailed analytics panels with an interactive web UI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <h2 class="section-title">Certifications</h2>
+                
+                <div class="certifications-grid">
+                    <!-- Cert 1 -->
+                    <div class="cert-card glass-panel">
+                        <div class="cert-icon">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3>Summer Internship Certificate</h3>
+                            <span class="cert-issuer">Hindalco Industries Ltd. (Aditya Birla Group)</span>
+                            <span class="cert-year">2025</span>
+                            <a href="#" class="cert-link">Verify Credentials <i data-lucide="external-link"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cert 2 -->
+                    <div class="cert-card glass-panel">
+                        <div class="cert-icon">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3>Software Development Internship Certificate</h3>
+                            <span class="cert-issuer">Bluestock Fintech</span>
+                            <span class="cert-year">2025</span>
+                            <a href="#" class="cert-link">Verify Credentials <i data-lucide="external-link"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Cert 3 -->
+                    <div class="cert-card glass-panel">
+                        <div class="cert-icon">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3>Certificate of Participation (Machine Learning)</h3>
+                            <span class="cert-issuer">Softpro India Computer Technologies (P) Ltd.</span>
+                            <span class="cert-year">2024</span>
+                            <a href="#" class="cert-link">Verify Credentials <i data-lucide="external-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-info-cards">
+                        <!-- Email Card -->
+                        <div class="contact-card glass-panel">
+                            <div class="contact-card-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <h4>Email Me</h4>
+                                <p><a href="mailto:arai59731@gmail.com">arai59731@gmail.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Phone Card -->
+                        <div class="contact-card glass-panel">
+                            <div class="contact-card-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <h4>Call Me</h4>
+                                <p><a href="tel:+918795461712">+91 8795461712</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- Location Card -->
+                        <div class="contact-card glass-panel">
+                            <div class="contact-card-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="contact-card-info">
+                                <h4>Location</h4>
+                                <p>Greater Noida, Uttar Pradesh, India</p>
+                            </div>
+                        </div>
+                        
+                        <!-- GitHub Card -->
+                        <div class="contact-card glass-panel">
+                            <div class="contact-card-icon">
+                                <img src="assets/github-logo.png" alt="GitHub Logo" style="width: 28px; height: 28px; object-fit: contain;">
+                            </div>
+                            <div class="contact-card-info">
+                                <h4>GitHub Profile</h4>
+                                <p><a href="https://github.com/Ankitrai-01" target="_blank">github.com/Ankitrai-01</a></p>
+                            </div>
+                        </div>
+                        
+                        <!-- LinkedIn Card -->
+                        <div class="contact-card glass-panel">
+                            <div class="contact-card-icon">
+                                <img src="assets/linkedin-logo.png" alt="LinkedIn Logo" style="width: 28px; height: 28px; object-fit: contain;">
+                            </div>
+                            <div class="contact-card-info">
+                                <h4>LinkedIn Profile</h4>
+                                <p><a href="https://linkedin.com/in/01ankit-rai" target="_blank">linkedin.com/in/01ankit-rai</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="contact-form-panel glass-panel">
+                        <h3 class="form-title">Send a Message</h3>
+                        <p class="form-desc">Got a project, question, or job opportunity? Let's connect!</p>
+                        
+                        <form id="contact-form" novalidate>
+                            <div class="form-message" id="form-msg"></div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="form-name" class="form-input" placeholder=" " required>
+                                <label for="form-name" class="form-label">Full Name</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="form-email" class="form-input" placeholder=" " required>
+                                <label for="form-email" class="form-label">Email Address</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="form-subject" class="form-input" placeholder=" " required>
+                                <label for="form-subject" class="form-label">Subject</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="form-content" class="form-input" placeholder=" " required></textarea>
+                                <label for="form-content" class="form-label">Your Message</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" id="form-submit-btn">
+                                Send Message <i data-lucide="send"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
+
+    <!-- Footer -->
     <footer>
-        <div class="footer">
-            <div class="footer-first">
-                <h3> Ankit's Devloper Portfolio</h3>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://github.com/Ankitrai-01" target="_blank" class="social-link" aria-label="GitHub Link">
+                    <img src="assets/github-logo.png" alt="GitHub Logo" style="width: 20px; height: 20px; object-fit: contain;">
+                </a>
+                <a href="https://linkedin.com/in/01ankit-rai" target="_blank" class="social-link" aria-label="LinkedIn Link">
+                    <img src="assets/linkedin-logo.png" alt="LinkedIn Logo" style="width: 20px; height: 20px; object-fit: contain;">
+                </a>
+                <a href="mailto:arai59731@gmail.com" class="social-link" aria-label="Email Link">
+                    <i data-lucide="mail"></i>
+                </a>
             </div>
-            <div class="footer-second">
-                <ul>
-                    <li>Home</li>
-                    <li>about</li>
-                    <li>contact</li>
-                    <li>services</li>
-                </ul>
-            </div>
-            <div class="footer-third">
-                <ul>
-                    <li>Home</li>
-                    <li>about</li>
-                    <li>contact</li>
-                    <li>services</li>
-                </ul>
-            </div>
-            <div class="footer-fourth">
-                <ul>
-                    <li>Home</li>
-                    <li>about</li>
-                    <li>contact</li>
-                    <li>services</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-rights">
-            copyright &#169;ankitsportfolio.com | All rights reserved
+            
+            <p class="copyright">
+                &copy; 2026 Ankit Rai. All Rights Reserved. Made with <i data-lucide="heart" style="width: 14px; height: 14px; display: inline; color: #ef4444; fill: #ef4444;"></i> in Greater Noida.
+            </p>
         </div>
     </footer>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
     <script>
-        var typed = new Typed('#element', {
-            strings: ['Web Devloper', 'Graphic Designer', 'Web Designer'],
-            typeSpeed: 50,
-        });
+        // Initialize Lucide Icons
+        lucide.createIcons();
     </script>
 </body>
-
 </html>
